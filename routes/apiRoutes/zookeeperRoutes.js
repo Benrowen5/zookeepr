@@ -26,7 +26,7 @@ router.post('/zookeepers', (req, res) => {
     req.body.id = zookeepers.length.toString();
     
     // check if the entry did not pass the validation
-    if (!validateZookeepers(req.body)) {
+    if (!validateZookeeper(req.body)) {
         res.status(400).send('The zookeeper is not properly formatted.');
     } else {
     // add zookeeper to JSON file and zookeepers array in this function
