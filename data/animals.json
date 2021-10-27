@@ -135,6 +135,25 @@
         "goofy"
       ],
       "id": "13"
+    },
+    {
+      "name": "Joe",
+      "species": "monkey",
+      "diet": "carnivore",
+      "personalityTraits": [
+        "zany"
+      ],
+      "id": "14"
+    },
+    {
+      "name": "Gary",
+      "species": "monkey",
+      "diet": "omnivore",
+      "personalityTraits": [
+        "hungry",
+        "goofy"
+      ],
+      "id": "15"
     }
   ]
 }
