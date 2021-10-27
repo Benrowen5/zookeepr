@@ -117,10 +117,22 @@ app.post('/api/animals', (req, res) => {
         res.json(animal);
     }
 });
-
+// GET route to serve the index.html page
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './public/index.html'));
 });
+// GET route to serve the animals page
+app.get('/animals', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/animals.html'));
+})
+// GET route to serve the zookeepers page
+app.get('/zookeepers', (req, res) => {
+    res.sendFile(path.join(__dirname, '/public/zookeepers.html'));
+})
+// GET route wildcard for any routes not defined, redirects to index.html page
+app.get('*', (req,res) => {
+    res.sendFile(path.join(__dirname, '/public/index.html'));
+})
 
 app.listen(PORT, () => {
     console.log(`API server now on port ${PORT}!`);
